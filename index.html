@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+
+    @font-face {
+      font-family: fontblue1;
+      src: url("HankenGrotesk-Medium.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: fontblue2;
+      src: url("HankenGrotesk-Bold.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    Body{
+      background-color: hsl(221, 100%, 96%);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #main{
+      width: 50vw;
+      border-radius: 30px;
+      background-color: white;
+      height: 60vh;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      /* padding: 20px; */
+    }
+
+    #side{
+      background: linear-gradient(to bottom,hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+      border-radius: 30px;
+      height: 100%;
+      width: 25vw;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    #rest{
+      background-color: white;
+      border-radius: 30px;
+      height: 100%;
+      width: 25vw;
+      padding:  30px;
+      box-sizing: border-box;
+      /* text-align: center; */
+    }
+
+    #text1{
+      font-family: fontblue1;
+      font-size: x-large;
+      color: hsl(241, 100%, 89%);
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+
+    #text5{
+      font-family: fontblue2;
+      font-size: x-large;
+      color: hsl(224, 30%, 27%);
+      margin-bottom: 20px;
+    }
+
+    #circle{
+      background: linear-gradient(to bottom,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+      width: 180px;
+      height: 180px;
+      margin:  10px auto 20px auto;
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: center;
+      padding: 35px;
+      box-sizing: border-box;
+    }
+
+    #text2-1{
+      color: white;
+      font-family: fontblue2;
+      font-size: 60px;
+      /* margin-top: 100px; */
+    }
+
+    #text2-2{
+      color:hsl(242, 22%, 69%);
+      font-family: fontblue1;
+      font-size: medium;
+    }
+
+    #text3{
+      color: white;
+      font-family: fontblue2;
+      font-size: xx-large;
+      margin: 10px auto;
+      letter-spacing: 0.75px;
+    }
+
+    #text4{
+      color:hsl(241, 100%, 89%);
+      font-family: fontblue1;
+      width: 100%;
+      padding:  0px 20px;
+      box-sizing: border-box;
+    }
+
+    #box1 ,#box2 ,#box3 ,#box4{
+      padding: 12.5px;
+      border-radius: 7.5px;
+      font-family: fontblue1;
+      margin: 15px 10px;
+    }
+
+    #box1{
+      color: hsl(0, 100%, 67%);
+      background-color: hsla(0, 100%, 67%, 0.1);
+    }
+
+    #box2{
+      color: hsl(39, 100%, 56%);
+      background-color: hsl(39, 100%, 56%,0.1);
+    }
+
+    #box3{
+      color: hsl(166, 100%, 37%);
+      background-color: hsl(166, 100%, 37%,0.1);
+    }
+
+    #box4{
+      color: hsl(234, 85%, 45%);
+      background-color: hsl(234, 85%, 45%,0.1);
+    }
+
+    .text6-1{
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    .text6-2{
+      position: absolute;
+      left: 920px;
+      margin-left: 100px;
+      /* background-color: black; */
+      font-family: fontblue2;
+      color: hsl(224, 30%, 27%);
+      font-weight: bold;
+      font-size: large;
+    }
+
+    .text6-2-2{
+      color: hsl(242, 22%, 69%);
+    }
+
+    #continue{
+      margin:  30px auto;
+      padding: 20px;
+      color: white;
+      font-family: fontblue1;
+      font-size: medium;
+      border-radius: 50px;
+      background-color: hsl(224, 30%, 27%);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="main">
+
+    <div id="side">
+      <div id="text1">Your Result</div>
+
+      <div id="circle">
+
+        <div id="text2-1">76</div>
+
+        <div id="text2-2">of 100</div>
+
+      </div>
+
+      <div id="text3">Great</div>
+
+      <div id="text4">You scored higher than 65% of <br> the people who have taken <br> these tests.</div>
+    </div>
+    
+    <div id="rest">
+
+      <div id="text5">Summary</div>
+
+      <div id="box1"><img src="icon-reaction.svg" alt="reaction"><span class="text6-1">Reaction</span><span class="text6-2">80 <span class="text6-2-2">/ 100</span></span></div>
+      <div id="box2"><img src="icon-memory.svg" alt="memory"><span class="text6-1">Memory</span><span class="text6-2">92 <span class="text6-2-2">/ 100</span></span></div>
+      <div id="box3"><img src="icon-verbal.svg" alt="verbal"><span class="text6-1">Verbal</span><span class="text6-2">61 <span class="text6-2-2">/ 100</span></span></div>
+      <div id="box4"><img src="icon-visual.svg" alt="visual"><span class="text6-1">Visual</span><span class="text6-2">73 <span class="text6-2-2">/ 100</span></span></div>
+
+      <div id="continue">Continue</div>
+    </div>
+
+  </div>
+
+  <!-- Your Result
+  76
+  of 100
+
+  Great
+  You scored higher than 65% of the people who have taken these tests.
+  
+  Summary
+
+  Reaction
+  80 / 100
+
+  Memory
+  92 / 100
+
+  Verbal
+  61 / 100
+
+  Visual
+  72 / 100
+
+  Continue -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
