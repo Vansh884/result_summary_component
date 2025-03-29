@@ -44,17 +44,18 @@
       width: 50vw;
       border-radius: 30px;
       background-color: white;
-      height: 60vh;
+      height: fit-content;
       margin: auto;
       display: flex;
       flex-direction: row;
+      box-sizing: border-box;
       /* padding: 20px; */
     }
 
     #side{
       background: linear-gradient(to bottom,hsl(252, 100%, 67%),hsl(241, 81%, 54%));
       border-radius: 30px;
-      height: 100%;
+      height: fit-content;
       width: 25vw;
       padding: 20px;
       box-sizing: border-box;
@@ -64,9 +65,9 @@
     #rest{
       background-color: white;
       border-radius: 30px;
-      height: 100%;
+      height: fit-content;
       width: 25vw;
-      padding:  30px;
+      padding:  20px;
       box-sizing: border-box;
       /* text-align: center; */
     }
@@ -133,6 +134,9 @@
       border-radius: 7.5px;
       font-family: fontblue1;
       margin: 15px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     #box1{
@@ -156,27 +160,27 @@
     }
 
     .text6-1{
-      padding: 10px;
+      padding: 0px 5px;
       vertical-align: top;
     }
 
     .text6-2{
-      position: absolute;
-      left: 920px;
-      margin-left: 100px;
-      /* background-color: black; */
       font-family: fontblue2;
       color: hsl(224, 30%, 27%);
       font-weight: bold;
       font-size: large;
+      display: flex;
+      justify-content: space-evenly;
     }
 
     .text6-2-2{
       color: hsl(242, 22%, 69%);
+      padding: 0px 5px;
     }
 
     #continue{
-      margin:  30px auto;
+      /* margin:  30px auto; */
+      margin: auto;
       padding: 20px;
       color: white;
       font-family: fontblue1;
@@ -184,6 +188,13 @@
       border-radius: 50px;
       background-color: hsl(224, 30%, 27%);
       text-align: center;
+      display: block;
+    }
+
+    .text6-05{
+      /* display: flex;
+      justify-content: space-evenly;
+      align-items: center; */
     }
   </style>
 </head>
@@ -211,10 +222,30 @@
 
       <div id="text5">Summary</div>
 
-      <div id="box1"><img src="icon-reaction.svg" alt="reaction"><span class="text6-1">Reaction</span><span class="text6-2">80 <span class="text6-2-2">/ 100</span></span></div>
-      <div id="box2"><img src="icon-memory.svg" alt="memory"><span class="text6-1">Memory</span><span class="text6-2">92 <span class="text6-2-2">/ 100</span></span></div>
-      <div id="box3"><img src="icon-verbal.svg" alt="verbal"><span class="text6-1">Verbal</span><span class="text6-2">61 <span class="text6-2-2">/ 100</span></span></div>
-      <div id="box4"><img src="icon-visual.svg" alt="visual"><span class="text6-1">Visual</span><span class="text6-2">73 <span class="text6-2-2">/ 100</span></span></div>
+      <div id="box1">
+        <span class="text6-05">
+          <span><img src="icon-reaction.svg" alt="reaction"></span>
+        <span class="text6-1">Reaction</span></span>
+        <span class="text6-2">80 
+        <span class="text6-2-2">/ 100</span></span></div>
+      <div id="box2">
+        <span class="text6-05">
+          <span><img src="icon-memory.svg" alt="memory"></span>
+        <span class="text6-1">Memory</span></span>
+        <span class="text6-2">92 
+        <span class="text6-2-2">/ 100</span></span></div>
+      <div id="box3">
+        <span class="text6-05">
+          <span><img src="icon-verbal.svg" alt="verbal"></span>
+        <span class="text6-1">Verbal</span></span>
+        <span class="text6-2">61 
+        <span class="text6-2-2">/ 100</span></span></div>
+      <div id="box4">
+        <span class="text6-05">
+          <span><img src="icon-visual.svg" alt="visual"></span>
+        <span class="text6-1">Visual</span></span>
+        <span class="text6-2">73 
+        <span class="text6-2-2">/ 100</span></span></div>
 
       <div id="continue">Continue</div>
     </div>
